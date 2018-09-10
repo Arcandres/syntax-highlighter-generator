@@ -15,8 +15,8 @@
 
   <div class="main container">
     <div class="description">
-      <p>Resalte su código con gran variedad de estilos sin el uso de Javascript.</p>
-      <p>Para generar su código, sólo debe pegarlo en la caja izquierda y procesarlo. La otra caja mostrará la vista previa de el código introducido. Puede seleccionar diferentes temas de colores.</p>
+      <p>Highlight your code with a large set of themes without need of JavaScript. Just CSS and HTML</p>
+      <p>Just paste your code in the first code block and you'll get the preview instantly. You can change the language and theme by typing them in the text inputs.</p>
     </div>
     <div class="item">
       <textarea class="code" id="code"> getComponent() {
@@ -42,14 +42,13 @@ document.registerElement('atom-text-editor', {
     <div class="container">
       <span style="font-weight:600;">LANG</span> <input id="langSelector" value="javascript">
       <span style="font-weight:600;">THEME</span> <input id="themeSelector" value="atom-one-dark">
-      <button id='convert' type="button">Procesar</button>
     </div>
     <div class="link container">
-      <p style="text-align: center;">Debes poner esta linea de código antes del cierre de tu etiqueta <code>&lt;/head&gt;</code>.</p>
+      <p style="text-align: center;">Now you have your code set, you need to place the CSS of your theme, paste it before <code>&lt;/head&gt;</code>.</p>
       <p style="text-align: center;"><code id="css">&ltlink rel="stylesheet" href="URL"&gt;</code></p>
     </div>
     <div class="finish container">
-      <p>Este es el código procesado por <a target="_blank" href="https://highlightjs.org/">highlight.js</a>, sólo copialo y pegalo donde quieras mostrar tu código.</p>
+      <p>This is the code highlighted by <a target="_blank" href="https://highlightjs.org/">highlight.js</a>, paste it wherever you want.</p>
       <pre class="parsed code" id="parsed" readonly></pre>
     </div>
 
