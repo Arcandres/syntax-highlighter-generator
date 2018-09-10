@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Syntax Highligh Generator - Arcandres</title>
+  <link id="theme" rel="stylesheet" href="/themes/atom-one-dark.css">
+  <link rel="stylesheet" href="css/s.css">
+</head>
+<body>
+  <header class="header container item">
+    <h1>Syntax Highligh Generator</h1>
+  </header>
+
+  <div class="main container">
+    <div class="description">
+      <p>Resalte su código con gran variedad de estilos sin el uso de Javascript.</p>
+      <p>Para generar su código, sólo debe pegarlo en la caja izquierda y procesarlo. La otra caja mostrará la vista previa de el código introducido. Puede seleccionar diferentes temas de colores.</p>
+    </div>
+    <div class="item">
+      <textarea class="code" id="code"> getComponent() {
+    if (!this.component) {
+      this.component = new TextEditorComponent({
+        element: this,
+        mini: this.hasAttribute('mini'),
+        updatedSynchronously: this.updatedSynchronously
+      })
+      this.updateModelFromAttributes()
+    }
+  }
+    return this.component
+  }
+
+module.exports =
+document.registerElement('atom-text-editor', {
+  prototype: TextEditorElement.prototype
+})</textarea>
+      <pre><code id="preview" class="hljs">&lt;h1&gt;¡Hola mundo!&lt;/h1&gt;
+      </code></pre>
+    </div>
+    <div class="container">
+      <span style="font-weight:600;">LANG</span> <input id="langSelector" type="text" value="javascript">
+      <button id='convert' type="button">Procesar</button>
+
+      <select id="themeSelector">
+        <option>atom-one-dark</option>
+        <option>atom-one-light</option>
+        <option>codepen-embed</option>
+        <option>dracula</option>
+        <option>foundation</option>
+        <option>github</option>
+        <option>monokai</option>
+        <option>monokai-sublime</option>
+      </select>
+    </div>
+    <div class="link container">
+      <p style="text-align: center;">Debes poner esta linea de código antes del cierre de tu etiqueta <code>&lt;/head&gt;</code>.</p>
+      <p style="text-align: center;"><code id="css">&ltlink rel="stylesheet" href="URL"&gt;</code></p>
+    </div>
+    <div class="finish container">
+      <p>Este es el código procesado por <a target="_blank" href="https://highlightjs.org/">highlight.js</a>, sólo copialo y pegalo donde quieras mostrar tu código.</p>
+      <pre class="parsed code" id="parsed" readonly></pre>
+    </div>
+
+  </div>
+
+  <!-- If you want more language support, eddit this line with the url of all languages you want -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="js/j.js"></script>
+
+</body>
+</html>
