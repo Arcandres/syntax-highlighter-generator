@@ -22,8 +22,7 @@
   }
 
   addEventListener('DOMContentLoaded', () => {
-    syntax(), lang(), addEventListener('keyup', lang),
+    syntax(), lang(), addEventListener('keyup', lang)
     themeSelector.addEventListener('change', changeTheme)
-    convert.addEventListener('click', )
   })
 })(document);
