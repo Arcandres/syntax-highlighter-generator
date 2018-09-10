@@ -7,7 +7,7 @@
   }
 
   function changeTheme() {
-    theme.href = `themes/${themeSelector.value}.css`;
+    theme.href = `https://cdn.rawgit.com/highlightjs/highlight.js/master/src/styles/${themeSelector.value}.css`;
     css.textContent = theme.outerHTML.replace('id="theme"','');
   }
 
@@ -21,7 +21,9 @@
     syntax()
   }
 
-  addEventListener('DOMContentLoaded', () =>{syntax(), lang(), addEventListener('keyup', syntax)})
-  themeSelector.addEventListener('change', changeTheme)
-  convert.addEventListener('click', lang)
+  addEventListener('DOMContentLoaded', () => {
+    syntax(), lang(), addEventListener('keyup', lang),
+    themeSelector.addEventListener('change', changeTheme)
+    convert.addEventListener('click', )
+  })
 })(document);
