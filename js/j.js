@@ -13,6 +13,7 @@
 
   function lang() {
     if (langSelector.value) {
+      langSelector.value = langSelector.value.toLowerCase()
       for( let i = preview.classList.length; i > 0; i-- ) {
         preview.classList.remove( preview.classList[0] );
       }
